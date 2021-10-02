@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket", "Rocket.csproj", "{8BA87F98-BB0A-42E0-BBA1-F62B7B691F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketTest", "RocketTest\RocketTest.csproj", "{D70109DF-F483-4DEF-AE29-24AA64DE1747}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketTests", "RocketTests\RocketTests.csproj", "{D699C26E-746F-44DD-A664-6AF96F676F15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{8BA87F98-BB0A-42E0-BBA1-F62B7B691F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BA87F98-BB0A-42E0-BBA1-F62B7B691F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BA87F98-BB0A-42E0-BBA1-F62B7B691F98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D70109DF-F483-4DEF-AE29-24AA64DE1747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D70109DF-F483-4DEF-AE29-24AA64DE1747}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D70109DF-F483-4DEF-AE29-24AA64DE1747}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D70109DF-F483-4DEF-AE29-24AA64DE1747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D699C26E-746F-44DD-A664-6AF96F676F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D699C26E-746F-44DD-A664-6AF96F676F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D699C26E-746F-44DD-A664-6AF96F676F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D699C26E-746F-44DD-A664-6AF96F676F15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

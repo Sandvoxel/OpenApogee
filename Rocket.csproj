@@ -14,17 +14,21 @@
     <ItemGroup>
       <AvaloniaXaml Remove="TestProject\**" />
       <AvaloniaXaml Remove="RocketTest\**" />
+      <AvaloniaXaml Remove="RocketTests\**" />
     </ItemGroup>
     <ItemGroup>
       <Compile Remove="TestProject\**" />
       <Compile Remove="RocketTest\**" />
+      <Compile Remove="RocketTests\**" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Remove="TestProject\**" />
       <EmbeddedResource Remove="RocketTest\**" />
+      <EmbeddedResource Remove="RocketTests\**" />
     </ItemGroup>
     <ItemGroup>
       <None Remove="TestProject\**" />
       <None Remove="RocketTest\**" />
+      <None Remove="RocketTests\**" />
     </ItemGroup>
 </Project>

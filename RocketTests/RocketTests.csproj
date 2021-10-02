@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Rocket\Rocket.csproj" />
+      <ProjectReference Include="..\Rocket.csproj" />
     </ItemGroup>
 
 </Project>

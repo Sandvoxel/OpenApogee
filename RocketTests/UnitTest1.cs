@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Rocket;
 
-namespace RocketTest {
+namespace RocketTests {
     public class Tests {
         [SetUp]
         public void Setup() {
@@ -9,7 +9,7 @@ namespace RocketTest {
 
         [Test]
         public void Test1() {
-            Assert.AreEqual(Test.add(1, 1), 2);
+            Assert.AreEqual(Test.add(1,1), 2);
         }
     }
 }
