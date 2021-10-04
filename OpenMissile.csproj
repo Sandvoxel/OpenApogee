@@ -5,6 +5,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
+        <Folder Include="Models\" />
+        <AvaloniaResource Include="Assets\**" />
+    </ItemGroup>
+    <ItemGroup>
         <PackageReference Include="Avalonia" Version="0.10.7" />
         <PackageReference Include="Avalonia.Desktop" Version="0.10.7" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
@@ -12,23 +16,15 @@
         <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.7" />
     </ItemGroup>
     <ItemGroup>
-      <AvaloniaXaml Remove="TestProject\**" />
-      <AvaloniaXaml Remove="RocketTest\**" />
-      <AvaloniaXaml Remove="RocketTests\**" />
+      <AvaloniaXaml Remove="OpenMissileTest\**" />
     </ItemGroup>
     <ItemGroup>
-      <Compile Remove="TestProject\**" />
-      <Compile Remove="RocketTest\**" />
-      <Compile Remove="RocketTests\**" />
+      <Compile Remove="OpenMissileTest\**" />
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Remove="TestProject\**" />
-      <EmbeddedResource Remove="RocketTest\**" />
-      <EmbeddedResource Remove="RocketTests\**" />
+      <EmbeddedResource Remove="OpenMissileTest\**" />
     </ItemGroup>
     <ItemGroup>
-      <None Remove="TestProject\**" />
-      <None Remove="RocketTest\**" />
-      <None Remove="RocketTests\**" />
+      <None Remove="OpenMissileTest\**" />
     </ItemGroup>
 </Project>

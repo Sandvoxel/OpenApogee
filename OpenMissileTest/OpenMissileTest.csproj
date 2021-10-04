@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Rocket.csproj" />
+      <ProjectReference Include="..\OpenMissile.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using Rocket;
 
-namespace RocketTests {
+namespace OpenMissileTest {
     public class Tests {
         [SetUp]
         public void Setup() {
@@ -9,7 +8,7 @@ namespace RocketTests {
 
         [Test]
         public void Test1() {
-            Assert.AreEqual(Test.add(1,1), 2);
+            Assert.Pass();
         }
     }
 }
