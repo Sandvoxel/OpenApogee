@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenApogee", "OpenApogee.csproj", "{719F36FD-5C9E-4AA5-B104-890A1D89E9C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenApogeeTest", "OpenApogeeTest\OpenApogeeTest.csproj", "{69AA26C1-DB69-4381-9A14-5C7A24C0609A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{719F36FD-5C9E-4AA5-B104-890A1D89E9C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719F36FD-5C9E-4AA5-B104-890A1D89E9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719F36FD-5C9E-4AA5-B104-890A1D89E9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719F36FD-5C9E-4AA5-B104-890A1D89E9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69AA26C1-DB69-4381-9A14-5C7A24C0609A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AA26C1-DB69-4381-9A14-5C7A24C0609A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AA26C1-DB69-4381-9A14-5C7A24C0609A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AA26C1-DB69-4381-9A14-5C7A24C0609A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

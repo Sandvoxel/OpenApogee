@@ -1,7 +1,12 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="Rocket.App">
+             xmlns:openApogee="clr-namespace:OpenApogee"
+             x:Class="OpenApogee.App">
+    <Application.DataTemplates>
+        <openApogee:ViewLocator/>
+    </Application.DataTemplates>
+
     <Application.Styles>
-        <FluentTheme Mode="Light"/>
+        <FluentTheme Mode="Dark"/>
     </Application.Styles>
 </Application>
