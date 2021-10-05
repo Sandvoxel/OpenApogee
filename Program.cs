@@ -14,7 +14,7 @@ namespace OpenApogee {
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToTrace(LogEventLevel.Information)
+                .LogToTrace(LogEventLevel.Information, LogArea.Control)
                 .UseReactiveUI();
     }
 }
