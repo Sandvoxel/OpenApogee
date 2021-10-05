@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using OpenMissile.ViewModels;
-using OpenMissile.Views;
+using OpenApogee.ViewModels;
+using OpenApogee.Views;
 
-namespace OpenMissile {
+namespace OpenApogee {
     public class App : Application {
         public override void Initialize() {
             AvaloniaXamlLoader.Load(this);

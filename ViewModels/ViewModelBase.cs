@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ReactiveUI;
+﻿using ReactiveUI;
 
-namespace OpenMissile.ViewModels {
+namespace OpenApogee.ViewModels {
     public class ViewModelBase : ReactiveObject {
     }
 }

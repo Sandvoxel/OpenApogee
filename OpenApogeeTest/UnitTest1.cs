@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace OpenMissileTest {
+namespace OpenApogeeTest {
     public class Tests {
         [SetUp]
         public void Setup() {

@@ -3,6 +3,8 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
         <Nullable>enable</Nullable>
+        <AssemblyName>OpenApogee</AssemblyName>
+        <RootNamespace>OpenApogee</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
         <Folder Include="Models\" />
@@ -16,15 +18,15 @@
         <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.7" />
     </ItemGroup>
     <ItemGroup>
-      <AvaloniaXaml Remove="OpenMissileTest\**" />
+      <AvaloniaXaml Remove="OpenApogeeTest\**" />
     </ItemGroup>
     <ItemGroup>
-      <Compile Remove="OpenMissileTest\**" />
+      <Compile Remove="OpenApogeeTest\**" />
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Remove="OpenMissileTest\**" />
+      <EmbeddedResource Remove="OpenApogeeTest\**" />
     </ItemGroup>
     <ItemGroup>
-      <None Remove="OpenMissileTest\**" />
+      <None Remove="OpenApogeeTest\**" />
     </ItemGroup>
 </Project>

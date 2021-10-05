@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using OpenMissile.ViewModels;
+using OpenApogee.ViewModels;
 
-namespace OpenMissile {
+namespace OpenApogee {
     public class ViewLocator : IDataTemplate {
         public IControl Build(object data) {
             var name = data.GetType().FullName!.Replace("ViewModel", "View");

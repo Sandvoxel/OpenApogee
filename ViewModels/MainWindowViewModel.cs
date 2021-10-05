@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Avalonia.Logging;
 using ReactiveUI;
 
-namespace OpenMissile.ViewModels {
+namespace OpenApogee.ViewModels {
     public class MainWindowViewModel : ViewModelBase {
         public MainWindowViewModel() {
             LaunchRocketCommand = ReactiveCommand.Create(() => {
