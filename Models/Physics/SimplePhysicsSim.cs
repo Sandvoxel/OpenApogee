@@ -4,10 +4,9 @@ using JetBrains.Annotations;
 
 namespace OpenApogee.Models.Physics {
     public class SimplePhysicsSim {
-        private Vector3 _position = new Vector3();
-        private Vector3 _momentum  = new Vector3();
-        
-        private Vector3 _velocity = new Vector3();
+        private Vector3 _position = new();
+        private Vector3 _velocity = new();
+        private Vector3 _momentum  = new();
 
         private double _mass = 1;
         private double _thrust = 15;
