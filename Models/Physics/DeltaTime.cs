@@ -27,7 +27,7 @@ namespace OpenApogee.Models.Physics {
         public double GetDeltaTime() {
             double deltaTime = _stopwatch.ElapsedMilliseconds - lastTime;
             lastTime = _stopwatch.ElapsedMilliseconds;
-            return deltaTime / 10;
+            return deltaTime / 30;
         }
 
         public void Deconstruct([NotNull] out Stopwatch stopwatch) {

@@ -22,6 +22,10 @@ namespace OpenApogee.Models.Physics {
             return  new Vector3(x /= magnitude, y /= magnitude, z /= magnitude);;
         }
 
+        public Vector3 Copy() {
+            return new Vector3(x, y, z);
+        }
+
 
         public static Vector3 operator *(Vector3 a, Vector3 b) => new(a.x * b.x, a.y * b.y, a.z * b.z);
         public static Vector3 operator +(Vector3 a, Vector3 b) {
@@ -30,14 +34,19 @@ namespace OpenApogee.Models.Physics {
             a.z += b.z;
             return a;
         }
+        
 
-        public static Vector3 operator /(Vector3 a,double b) {
-            a.x /= b;
-            a.y /= b;
-            a.z /= b;
+        public static Vector3 operator /(Vector3 a, double b) => new(a.x /= b, a.y /= b, a.z /= b);
+
+        public static Vector3 operator *(Vector3 a, double b) => Scale(a, b);
+        public static Vector3 operator *(double b ,Vector3 a) {
+            a.x *= b;
+            a.y *= b;
+            a.z *= b;
             return a;
         }
-        public static Vector3 operator *(Vector3 a,double b) {
+
+        public static Vector3 Scale(Vector3 a,double b) {
             a.x *= b;
             a.y *= b;
             a.z *= b;
