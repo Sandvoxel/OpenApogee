@@ -27,32 +27,12 @@ namespace OpenApogee.Models.Physics {
         }
 
 
-        //TODO: Redo all of these to return new Vector3s instead of using the provided
         public static Vector3 operator *(Vector3 a, Vector3 b) => new(a.x * b.x, a.y * b.y, a.z * b.z);
-        public static Vector3 operator +(Vector3 a, Vector3 b) {
-            a.x += b.x;
-            a.y += b.y;
-            a.z += b.z;
-            return a;
-        }
+        public static Vector3 operator +(Vector3 a, Vector3 b) => new(a.x + b.x, a.y + b.y, a.z + b.z);
+        public static Vector3 operator /(Vector3 a, double b) => new(a.x / b, a.y / b, a.z / b);
+        public static Vector3 operator *(Vector3 a, double b) => new(a.x * b, a.y * b, a.z * b);
+        public static Vector3 operator *(double b, Vector3 a) => new(a.x * b, a.y * b, a.z * b);
         
-
-        public static Vector3 operator /(Vector3 a, double b) => new(a.x /= b, a.y /= b, a.z /= b);
-
-        public static Vector3 operator *(Vector3 a, double b) => Scale(a, b);
-        public static Vector3 operator *(double b ,Vector3 a) {
-            a.x *= b;
-            a.y *= b;
-            a.z *= b;
-            return a;
-        }
-
-        public static Vector3 Scale(Vector3 a,double b) {
-            a.x *= b;
-            a.y *= b;
-            a.z *= b;
-            return a;
-        }
 
         public double X {
             get => x;
