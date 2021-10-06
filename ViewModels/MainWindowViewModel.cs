@@ -10,7 +10,7 @@ namespace OpenApogee.ViewModels {
         public MainWindowViewModel() {
             LaunchRocketCommand = ReactiveCommand.Create(() => {
                 Logger.Sink.Log(LogEventLevel.Information,LogArea.Control,"0", "Rocket Launched");
-                SimplePhysicsSim sim = new SimplePhysicsSim(new Vector3(0, 5, 0));
+                SimplePhysicsSim sim = new SimplePhysicsSim();
                 float temp = sim.Simulate();
                 Logger.Sink.Log(LogEventLevel.Information,LogArea.Control,"0", $"{temp:N3}");
 

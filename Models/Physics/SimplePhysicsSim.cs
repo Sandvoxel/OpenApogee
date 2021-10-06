@@ -10,42 +10,35 @@ namespace OpenApogee.Models.Physics {
         private Vector3 velocity = new Vector3();
 
         private float mass = 1;
-        public SimplePhysicsSim(Vector3 momentum) {
-            this.acceleration = momentum;
-        }
         
-
         public float Simulate() {
-            Stopwatch sw = new();
+            //Max Height for flight
             float apogee = 0;
-            sw.Start();
-            
-            
 
-            double lastTime  = sw.Elapsed.TotalMilliseconds / 2;
-            while (position.Y > -0.1) {
-                while (!(sw.ElapsedMilliseconds % 10 > 5)) {
-                    
-                }
-                double time = sw.Elapsed.TotalMilliseconds / 2;
-                double deltaTime = time - lastTime ;
-                lastTime = time;
+            //Delta time class
+            DeltaTime timer = new();
+            
+            //TODO: Move from real time to its own internal timeframe.
+            //TODO: Actually do the physics math by hand to find the max height for a given values (Write a test that dose this for you).
+            while (position.Y > -0.1) { 
                 
-
-                if (sw.Elapsed.TotalSeconds < 1) {
+                //If statement to stop rocket thrust after a second of burn time
+                if (timer.GetCurrentTime().TotalSeconds < 1) {
                     acceleration.Y = (15 / mass) - 9.8 ;
                 }
                 else {
                     acceleration.Y = -9.8;
                 }
-                
+
+                //integrating acceleration into velocity and then integrating velocity int position.
+                double deltaTime = timer.GetDeltaTime();
                 velocity += acceleration * deltaTime;
                 position += velocity * deltaTime;
                 
+                //capturing the max height of flight
                 apogee = (float)(position.Y > apogee ? position.Y : apogee);
             }
 
-            sw.Stop();
             return apogee;
         }
         
