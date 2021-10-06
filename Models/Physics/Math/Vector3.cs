@@ -27,6 +27,7 @@ namespace OpenApogee.Models.Physics {
         }
 
 
+        //TODO: Redo all of these to return new Vector3s instead of using the provided
         public static Vector3 operator *(Vector3 a, Vector3 b) => new(a.x * b.x, a.y * b.y, a.z * b.z);
         public static Vector3 operator +(Vector3 a, Vector3 b) {
             a.x += b.x;
