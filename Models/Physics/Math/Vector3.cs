@@ -1,4 +1,6 @@
-﻿namespace OpenApogee.Models.Physics.Math {
+﻿using System;
+
+namespace OpenApogee.Models.Physics.Math {
     public class Vector3 {
         private double x, y, z;
 
@@ -13,13 +15,14 @@
 
 
         public double Magnitude() {
-            return (double)System.Math.Sqrt((double)(x * x + y * y + z * z));
+            double sumOfSq = x * x + y * y + z * z;
+            if (sumOfSq < 0.01) throw new ArithmeticException();
+            return System.Math.Sqrt(x * x + y * y + z * z);
         }
 
         public Vector3 Normal() {
-            var magnitude = Magnitude();
-            return new Vector3(x /= magnitude, y /= magnitude, z /= magnitude);
-            ;
+            var magnitude = 1/Magnitude();
+            return new Vector3(x *= magnitude, y *= magnitude, z *= magnitude);
         }
 
         public Vector3 Copy() {
