@@ -41,8 +41,7 @@ namespace OpenApogeeTest {
 
                 double error = (rocketObject.Apogee - apogee) / apogee * 100;
 
-                Console.WriteLine(apogee + " " + rocketObject.Apogee);
-                Console.WriteLine(error);
+                Console.WriteLine($"Simulation error: {error:N4}%");
                 Console.WriteLine("");
 
                 if (error > 1) Assert.Fail("Simulation has excessive error");

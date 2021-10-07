@@ -33,7 +33,7 @@ namespace OpenApogee.Models.Physics {
         /// TODO: Change burn time to input a chart for the burn curve.
         /// <param name="burnTime">The burn time in seconds</param>
         /// <param name="timeDelta">The amount that time is stepped forward with each simulation loop Default<value>0.001</value></param>
-        public RocketObject(double mass, double thrust, double burnTime, double timeDelta = 0.001) {
+        public RocketObject(double mass, double thrust, double burnTime, double timeDelta = 0.0001) {
             _mass = mass;
             _thrust = thrust;
             _burnTime = burnTime;
