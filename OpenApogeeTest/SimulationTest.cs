@@ -20,23 +20,17 @@ namespace OpenApogeeTest {
         }
         [Test]
         public void CheckSimulationAccuracy() {
-            RocketObject rocketObject;
-
-            double mass;
-            double thrust;
-            double burnTime;
-
             for (int i = 0; i < 100; i++) {
-                mass = randomFromRange(0.5, 2);
-                thrust = randomFromRange(15, 50);
-                burnTime = randomFromRange(1, 5);
+                var mass = randomFromRange(0.5, 2);
+                var thrust = randomFromRange(15, 50);
+                var burnTime = randomFromRange(1, 5);
 
                 double heightAtBurnout = 0.5 * (thrust + Constants.GRAVITY * mass) / mass * (burnTime * burnTime);
                 double velocityAtBurnout = (thrust + Constants.GRAVITY * mass) / mass * burnTime;
                 double apogee = (velocityAtBurnout * velocityAtBurnout) / -(2 * Constants.GRAVITY) + heightAtBurnout;
                 if (apogee < 1) continue;
 
-                rocketObject = new(mass, thrust, burnTime);
+                RocketObject rocketObject = new(mass, thrust, burnTime);
                 rocketObject.Simulate();
 
                 double error = (rocketObject.Apogee - apogee) / apogee * 100;
