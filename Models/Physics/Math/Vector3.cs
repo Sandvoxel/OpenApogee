@@ -1,25 +1,25 @@
-﻿using System;
-
-namespace OpenApogee.Models.Physics {
+﻿namespace OpenApogee.Models.Physics.Math {
     public class Vector3 {
         private double x, y, z;
 
-        public Vector3() : this(0, 0, 0) {}
+        public Vector3() : this(0, 0, 0) {
+        }
 
         public Vector3(double x, double y, double z) {
             this.x = x;
             this.y = y;
             this.z = z;
         }
-        
-        
+
+
         public double Magnitude() {
-            return (double) Math.Sqrt(x*x + y*y + z*z);
+            return (double)System.Math.Sqrt((double)(x * x + y * y + z * z));
         }
 
         public Vector3 Normal() {
-            double magnitude = Magnitude();
-            return  new Vector3(x /= magnitude, y /= magnitude, z /= magnitude);;
+            var magnitude = Magnitude();
+            return new Vector3(x /= magnitude, y /= magnitude, z /= magnitude);
+            ;
         }
 
         public Vector3 Copy() {
@@ -27,12 +27,26 @@ namespace OpenApogee.Models.Physics {
         }
 
 
-        public static Vector3 operator *(Vector3 a, Vector3 b) => new(a.x * b.x, a.y * b.y, a.z * b.z);
-        public static Vector3 operator +(Vector3 a, Vector3 b) => new(a.x + b.x, a.y + b.y, a.z + b.z);
-        public static Vector3 operator /(Vector3 a, double b) => new(a.x / b, a.y / b, a.z / b);
-        public static Vector3 operator *(Vector3 a, double b) => new(a.x * b, a.y * b, a.z * b);
-        public static Vector3 operator *(double b, Vector3 a) => new(a.x * b, a.y * b, a.z * b);
-        
+        public static Vector3 operator *(Vector3 a, Vector3 b) {
+            return new(a.x * b.x, a.y * b.y, a.z * b.z);
+        }
+
+        public static Vector3 operator +(Vector3 a, Vector3 b) {
+            return new(a.x + b.x, a.y + b.y, a.z + b.z);
+        }
+
+        public static Vector3 operator /(Vector3 a, double b) {
+            return new(a.x / b, a.y / b, a.z / b);
+        }
+
+        public static Vector3 operator *(Vector3 a, double b) {
+            return new(a.x * b, a.y * b, a.z * b);
+        }
+
+        public static Vector3 operator *(double b, Vector3 a) {
+            return new(a.x * b, a.y * b, a.z * b);
+        }
+
 
         public double X {
             get => x;

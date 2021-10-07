@@ -2,11 +2,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:openApogee="clr-namespace:OpenApogee"
              x:Class="OpenApogee.App">
-    <Application.DataTemplates>
-        <openApogee:ViewLocator/>
-    </Application.DataTemplates>
+	<Application.DataTemplates>
+		<openApogee:ViewLocator />
+	</Application.DataTemplates>
 
-    <Application.Styles>
-        <FluentTheme Mode="Dark"/>
-    </Application.Styles>
+	<Application.Styles>
+		<FluentTheme Mode="Dark" />
+	</Application.Styles>
 </Application>

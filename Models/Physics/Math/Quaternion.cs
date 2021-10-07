@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OpenApogee.Models.Physics {
+﻿namespace OpenApogee.Models.Physics.Math {
     public class Quaternion {
         private float w, x, y, z;
 
@@ -13,11 +11,11 @@ namespace OpenApogee.Models.Physics {
 
 
         public float Magnitude() {
-            return (float) Math.Sqrt(w*w + x*x + y*y + z*z);
+            return (float)System.Math.Sqrt(w * w + x * x + y * y + z * z);
         }
 
         public void Normalise() {
-            float magnitude = Magnitude();
+            var magnitude = Magnitude();
             w /= magnitude;
             x /= magnitude;
             y /= magnitude;

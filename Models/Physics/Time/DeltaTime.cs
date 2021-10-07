@@ -2,7 +2,8 @@
 using System.Diagnostics;
 using JetBrains.Annotations;
 
-namespace OpenApogee.Models.Physics {
+namespace OpenApogee.Models.Physics.Time {
+    [Obsolete("Should be using PhysicsReferenceTime")]
     public class DeltaTime {
         private Stopwatch _stopwatch;
 
@@ -12,6 +13,7 @@ namespace OpenApogee.Models.Physics {
             _stopwatch = Stopwatch.StartNew();
             lastTime = _stopwatch.ElapsedMilliseconds;
         }
+
         /// <summary>
         /// Gets TimeSpan from running delta time clock
         /// </summary>
@@ -25,7 +27,7 @@ namespace OpenApogee.Models.Physics {
         /// </summary>
         /// <returns>Time between last call and now</returns>
         public double GetDeltaTime() {
-            double deltaTime = _stopwatch.ElapsedMilliseconds - lastTime;
+            var deltaTime = _stopwatch.ElapsedMilliseconds - lastTime;
             lastTime = _stopwatch.ElapsedMilliseconds;
             return deltaTime / 30;
         }

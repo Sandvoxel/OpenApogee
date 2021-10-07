@@ -1,9 +1,12 @@
-﻿namespace OpenApogee.Models {
-    public class PhysicsRefrenceTime {
-        private double _timeDelta;
+﻿namespace OpenApogee.Models.Physics.Time {
+    /// <summary>
+    /// This class is used for a fixed time step reference in physics calculations.
+    /// </summary>
+    public class PhysicsReferenceTime {
+        private readonly double _timeDelta;
         private double _currentTime;
 
-        public PhysicsRefrenceTime(double timeDelta) {
+        public PhysicsReferenceTime(double timeDelta) {
             _timeDelta = timeDelta;
         }
 
@@ -13,7 +16,7 @@
         public void UpdateTime() {
             _currentTime += _timeDelta;
         }
-        
+
 
         public double TimeDelta => _timeDelta;
         public double CurrentTime => _currentTime;
