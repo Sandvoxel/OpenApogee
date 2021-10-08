@@ -10,9 +10,17 @@ namespace OpenApogee.Models.Physics {
         // TODO: Add rotation component and apply forces based on the angle.
         // TODO: Calculate drag on body as speed increases;
 
-
+        /// <summary>
+        /// Meters
+        /// </summary>
         private Vector3 _position = new();
+        /// <summary>
+        /// Meters/S
+        /// </summary>
         private Vector3 _velocity = new();
+        /// <summary>
+        /// Meters/s*mass
+        /// </summary>
         private Vector3 _momentum = new();
 
         private PhysicsReferenceTime _referenceTime;
@@ -29,8 +37,8 @@ namespace OpenApogee.Models.Physics {
         /// Sets up <see cref="RocketObject"/> with default params.
         /// </summary>
         /// <param name="mass">The mass of the rocket in Kilograms</param>
-        /// <param name="thrust">The thrust of the rocket in Newtons</param>
         /// TODO: Change burn time to input a chart for the burn curve.
+        /// <param name="thrust">The thrust of the rocket in Newtons</param>
         /// <param name="burnTime">The burn time in seconds</param>
         /// <param name="timeDelta">The amount that time is stepped forward with each simulation loop Default<value>0.001</value></param>
         public RocketObject(double mass, double thrust, double burnTime, double timeDelta = 0.0001) {
@@ -56,6 +64,7 @@ namespace OpenApogee.Models.Physics {
                     _momentum.Y += (_thrust + _mass * Constants.GRAVITY) * _referenceTime.TimeDelta;
                 else
                     _momentum.Y += _mass * Constants.GRAVITY * _referenceTime.TimeDelta;
+                
                 _velocity = _momentum / _mass;
 
                 _position += _velocity * _referenceTime.TimeDelta;
