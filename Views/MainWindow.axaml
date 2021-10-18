@@ -32,6 +32,8 @@
 			        Command="{Binding LaunchRocketCommand}"
 			        HorizontalAlignment="Right"
 			        VerticalAlignment="Top" />
+			
+			<TextBlock Text="{Binding time}"/>
 		</Panel>
 
 	</Panel>
